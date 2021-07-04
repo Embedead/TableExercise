@@ -4,6 +4,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import {useSelector, useDispatch} from "react-redux"
 import {setTable} from "../store/actionCreators"
 import {Row} from "./Row"
+import {TableColumns} from "./TableColumns"
 
 const TableViewContainer = styled.div`
     padding: 1rem 0.75rem;
@@ -37,7 +38,7 @@ export const Table = () => {
 
     return(
         <TableViewContainer>
-
+        <TableColumns/>
         <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="droppable">
                 {(provided, snapshot)=>(

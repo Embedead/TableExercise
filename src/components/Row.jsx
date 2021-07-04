@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import BarChart from "../images/bar-chart.png"
 import GroupDots from "../images/groupdots.png"
+import {Status} from "./Status"
 
 const RowContainer = styled.div`
     display: flex;
@@ -38,10 +39,9 @@ export const Row = ({rowItem}) => {
             <RightSidedCell>
                 {rowItem.id}
             </RightSidedCell>
-            <CenteredSidedCell>
-                {rowItem.status}
-            </CenteredSidedCell>
+            
             <RightSidedCell>
+                <Status status={rowItem.status}/>
                 {rowItem.name}
             </RightSidedCell>
             <CenteredSidedCell>

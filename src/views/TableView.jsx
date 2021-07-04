@@ -18,8 +18,6 @@ export const TableView = () => {
         dispatch(setTable(tableValues));
         
     },[])
-    const table = useSelector((state)=> state.workerTable);
-  console.log("table is", table)
     return(
         <TableContainer>
             <Table/>
