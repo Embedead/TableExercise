@@ -14,4 +14,6 @@ export function setColumns(updatedColumns){
         type: actionTypes.SET_COLUMNS,
         updatedColumns,
     }
+
+    return action
 }
