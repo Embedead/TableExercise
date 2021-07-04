@@ -15,6 +15,16 @@ const initialState = {
             totalHours:"159:00",
             
         }
+    ],
+
+    columnValues: [
+        {value: "מספר ת.ז."},
+    {value: "שם עובד"},
+    {value: "שעות חריגות"},
+    {value:"שעות ידניות"},
+    {value:"שעות"},
+    {value:"סך הכל שעות"},
+    {value:"אפשרויות"}    
     ]
 };
 
@@ -27,6 +37,11 @@ const reducer = (
             return{
                 ...state,
                 workerTable: action.updatedTable
+            }
+        case actionTypes.SET_COLUMNS:
+            return{
+                ...state,
+                columnValues: action.updatedColumns
             }
             default:
                 return state;

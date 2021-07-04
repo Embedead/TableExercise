@@ -8,3 +8,10 @@ export function setTable(updatedTable){
 
     return action
 }
+
+export function setColumns(updatedColumns){
+    const action = {
+        type: actionTypes.SET_COLUMNS,
+        updatedColumns,
+    }
+}
