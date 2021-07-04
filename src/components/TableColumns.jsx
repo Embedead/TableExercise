@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import {useSelector, useDispatch} from "react-redux"
-import {setColumns} from "../store/actionCreators"
+import {useSelector} from "react-redux"
 
 const ColumnsContainer = styled.div`
     display: flex;
@@ -24,7 +22,6 @@ const ColumnCell = styled.span`
 
 export const TableColumns = () => {
     const columns = useSelector((state)=> state.columnValues);
-    const dispatch = useDispatch();
 
    
 

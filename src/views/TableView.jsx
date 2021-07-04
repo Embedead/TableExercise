@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {useDispatch} from "react-redux"
 import {setTable} from "../store/actionCreators"
 import {tableValues} from "../misc/tableValues"
-import { useSelector } from 'react-redux'
 import {Table} from "../components/Table"
 
 const TableContainer = styled.div`
