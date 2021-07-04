@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import {columnValues} from "../misc/columnValues"
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import {useSelector, useDispatch} from "react-redux"
+import {setColumns} from "../store/actionCreators"
 
 const ColumnsContainer = styled.div`
     display: flex;
@@ -21,9 +23,14 @@ const ColumnCell = styled.span`
 `
 
 export const TableColumns = () => {
-    return(
+    const columns = useSelector((state)=> state.columnValues);
+    const dispatch = useDispatch();
+
+   
+
+      return(
         <ColumnsContainer>
-            {columnValues.map((item,index) => {
+            {columns.map((item,index) => {
                 return(
                     <ColumnCell key={"column" + index}>
                         {item.value}
@@ -31,5 +38,5 @@ export const TableColumns = () => {
                 )
             })}
         </ColumnsContainer>
-    )
+      )
 }
